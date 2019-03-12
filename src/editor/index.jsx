@@ -27,7 +27,7 @@ class MdEditor extends React.Component {
   }
 
   static defaultProps = {
-    placeholder: '请输入内容...',
+    placeholder: 'Content...',
     lineNum: true
   }
 
@@ -141,6 +141,10 @@ class MdEditor extends React.Component {
     this.props.onSave()
   }
 
+  open = () => {
+    this.props.onOpen()
+  }
+
   render() {
     const { preview, expand, line_index } = this.state
     const { value } = this.props
@@ -178,28 +182,28 @@ class MdEditor extends React.Component {
       <div className={fullscreen} style={{ height: this.props.height }}>
         <div className="for-controlbar">
           <ul>
-            <li onClick={this.undo} title="上一步 (ctrl+z)">
+            <li onClick={this.undo} title="Undo (ctrl+z)">
               <i className="foricon for-undo" />
             </li>
-            <li onClick={this.redo} title="下一步 (ctrl+y)">
+            <li onClick={this.redo} title="Redo (ctrl+y)">
               <i className="foricon for-redo" />
             </li>
-            <li data-type="h1" onClick={this.insert} title="一级标题">
+            <li data-type="h1" onClick={this.insert} title="1">
               H1
             </li>
-            <li data-type="h2" onClick={this.insert} title="二级标题">
+            <li data-type="h2" onClick={this.insert} title="H2">
               H2
             </li>
-            <li data-type="h3" onClick={this.insert} title="三级标题">
+            <li data-type="h3" onClick={this.insert} title="H3">
               H3
             </li>
-            <li data-type="h4" onClick={this.insert} title="四级标题">
+            <li data-type="h4" onClick={this.insert} title="H4">
               H4
             </li>
-            <li data-type="image" onClick={this.insert} title="图片">
+            <li data-type="image" onClick={this.insert} title="Image">
               <i className="foricon for-image" />
             </li>
-            <li data-type="link" onClick={this.insert} title="超链接">
+            <li data-type="link" onClick={this.insert} title="Link">
               <i className="foricon for-link" />
             </li>
             <li data-type="code" onClick={this.insert} title="Code">
