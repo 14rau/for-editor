@@ -69,6 +69,7 @@
   },
   "dependencies": {
     "highlight.js": "^9.13.1",
-    "marked": "^0.5.2"
+    "marked": "^0.5.2",
+    "react-svg": "^7.2.11"
   }
 }

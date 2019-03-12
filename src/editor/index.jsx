@@ -6,6 +6,7 @@ import textInsert from '../helpers/insertText'
 import keydownListen from '../helpers/keydownListen'
 import 'highlight.js/styles/tomorrow.css'
 import '../fonts/iconfont.css'
+import ReactSVG from 'react-svg'
 
 class MdEditor extends React.Component {
   constructor(props) {
@@ -201,11 +202,14 @@ class MdEditor extends React.Component {
             <li data-type="link" onClick={this.insert} title="超链接">
               <i className="foricon for-link" />
             </li>
-            <li data-type="code" onClick={this.insert} title="代码块">
+            <li data-type="code" onClick={this.insert} title="Code">
               <i className="foricon for-code" />
             </li>
-            <li onClick={this.save} title="保存 (ctrl+s)">
+            <li onClick={this.save} title="Save (ctrl+s)">
               <i className="foricon for-save" />
+            </li>
+            <li onClick={this.open} title="Open">
+              <ReactSVG src="../src/fonts/folder.svg"/>
             </li>
           </ul>
           <ul>
