@@ -63,3 +63,7 @@
 .for-eye-off:before {
   content: "\e62a";
 }
+
+.for-open:before {
+  content: "\E62B";
+}
